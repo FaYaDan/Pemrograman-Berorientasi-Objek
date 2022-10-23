@@ -1,0 +1,18 @@
+package com.mercubuana.tb1;
+
+public class Kelvin {
+	
+	    double toFahrenheit(){
+	        //°F = K × 1,8 − 459,67
+	        return (TugasBesar1.SuhuAwal*1.8-459.67);
+	    }
+	    double toReamur(){
+	        //°Ré = (K − 273,15) × 0,8
+	        return ((TugasBesar1.SuhuAwal-273.15)*0.8);
+	    }
+	    double tocelcius(){
+	        //°C = K − 273,15
+	        return (TugasBesar1.SuhuAwal-273.15);
+	    }
+	}
+
