@@ -1,0 +1,83 @@
+package com.mercubuana.tb1;
+import  java.util.*;
+public class TugasBesar1  {
+   
+    static double SuhuAwal;
+    static char satuan;
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    	TugasBesar1 app = new TugasBesar1() ;
+    	app.inisialisasi();
+        // Masukan Logika Pemrograman
+        }
+     
+        void inisialisasi() {
+        
+        celcius fromcelcius = new celcius();
+        fahrenheit fromFahrenheit = new fahrenheit();
+        Reamur fromReamur = new Reamur();
+        Kelvin fromKelvin = new Kelvin();
+       
+        double Fahrenheit, Kelvin,Celcius,Reamur;
+        boolean valid=false;
+        Scanner input = new Scanner(System.in);
+       
+        while(valid!=true)
+        {
+            System.out.println("Program Konversi Suhu ");
+            System.out.print("Masukkan nilai Suhu:");
+            SuhuAwal=input.nextDouble();
+            System.out.print("Masukkan Satuan Suhu:");
+            satuan = input.next().charAt(0);
+ 
+            switch(satuan){
+                case 'C':
+                   Reamur = fromcelcius.toReamur();
+                    Fahrenheit = fromcelcius.tofahrenheit();
+                    Kelvin = fromcelcius.toKelvin();
+                    System.out.println("Suhu awal ="+SuhuAwal+" Celcius\nHasil:");
+                    System.out.println("Fahrenheit : "+Fahrenheit);
+                    System.out.println("Kelvin : "+Kelvin);
+                    System.out.println("Reamur : "+Reamur);
+                    valid=true;
+                   
+                    break;
+                case 'F':
+                    Celcius = fromFahrenheit.tocelcius();
+                    Reamur = fromFahrenheit.toReamur();
+                    Kelvin = fromFahrenheit.toKelvin();
+                    System.out.println("Suhu awal ="+SuhuAwal+" Fahrenheit\nHasil:");
+                    System.out.println("Celcius : "+Celcius);
+                    System.out.println("Kelvin : "+Kelvin);
+                    System.out.println("Reamur : "+Reamur);
+                    valid=true;
+                    break;
+                case 'K':
+                    Celcius = fromKelvin.tocelcius();
+                    Reamur = fromKelvin.toReamur();
+                    Fahrenheit = fromKelvin.toFahrenheit();
+                    System.out.println("Suhu awal ="+SuhuAwal+" Kelvin\nHasil:");
+                    System.out.println("Celcius : "+Celcius);
+                    System.out.println("Fahrenheit : "+Fahrenheit);
+                    System.out.println("Reamur : "+Reamur);
+                    valid=true;
+                    break;
+                case 'R':
+                    Celcius = fromReamur.tocelcius();
+                    Fahrenheit = fromReamur.toFahrenheit();
+                    Kelvin = fromReamur.toKelvin();
+                    System.out.println("Suhu awal ="+SuhuAwal+" Reamur\nHasil:");
+                    System.out.println("Celcius : "+Celcius);
+                    System.out.println("Fahrenheit : "+Fahrenheit);
+                    System.out.println("Kelvin : "+Kelvin);
+                    valid=true;
+                    break;
+                default :
+                    System.out.println("Input yang anda Masukan Salah!");
+            }
+        }
+        
+    }
+}
