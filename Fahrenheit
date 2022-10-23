@@ -1,0 +1,17 @@
+package com.mercubuana.tb1;
+
+public class fahrenheit {
+	    double toReamur(){
+	        //// Rumus Convert fahrenheit Re = (F − 32) / 2,25
+	        return ((TugasBesar1.SuhuAwal-32)/2.25);
+	    }
+	    double toKelvin(){
+	        //// Rumus Convert kelvin ke K = (F + 459,67) / 1,8
+	        return ((TugasBesar1.SuhuAwal+459.67)/ 1.8);
+	    }
+	    double tocelcius(){
+	        //// Rumus Convert ke celsius  °C = (°F − 32) / 1,8
+	        return ((TugasBesar1.SuhuAwal-32)/1.8);
+	    }
+	}
+
